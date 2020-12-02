@@ -76,5 +76,14 @@ class UserController {
             next(error)
         }
     }
+    async getUserSortedByTimestamp(req, res, next) {
+        try {
+
+            const record = await userService.getUsersSortedByTimestamp();
+            res.status(200).json({ status: true, data: record })
+        } catch (error) {
+            next(error);
+        }
+    }
 }
 module.exports = UserController;

@@ -44,4 +44,5 @@ GET http://localhost:3000/user/brad.gibson@example.com/info
 ###
 GET http://localhost:3000/user/distance?latitude=17.3850&longitude=78.4867
 
-
+###
+GET http://localhost:3000/user/sortedByTimestamp

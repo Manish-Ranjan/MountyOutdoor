@@ -34,4 +34,10 @@ router.delete('/:userId', userController.deleteUser);
  */
 router.get("/distance", userController.getAllUsersByDistance);
 
+/**
+ * @desc get all user sorted by timestamp
+ * @route http://localhost:3000/user/sortedByTimestamp
+ */
+router.get("/sortedByTimestamp", userController.getUserSortedByTimestamp)
+
 module.exports = router;
