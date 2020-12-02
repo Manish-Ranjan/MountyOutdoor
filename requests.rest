@@ -1,0 +1,47 @@
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+    "name":"Mr Brad gibson",
+    "email": "brad.gibson@example123.com",
+    "mobile": "081-454-066645",
+    "address": {
+        "street": "9278 new road",
+        "city": "kilcoole",
+        "state": "waterford",
+        "pincode": "93027",
+        "coordinatesType":"Point",
+        "coordinates": [ 22.9267,72.9310]
+      }
+
+}
+
+
+###
+PATCH http://localhost:3000/user/update/brad.gibson@example123.com
+Content-Type: application/json
+
+{
+    "address": {
+        "street": "9278 new road",
+        "city": "kilcoole",
+        "state": "waterford",
+        "pincode": "846004",
+        "coordinatesType":"Point",
+        "coordinates": [ 20.9267,-7.9310]
+      }
+
+}
+###
+DELETE http://localhost:3000/user/brad.gibson@example123.com
+
+###
+// get all users
+GET http://localhost:3000/user/users
+###
+// get single user by user email
+GET http://localhost:3000/user/brad.gibson@example.com/info
+###
+GET http://localhost:3000/user/distance?latitude=17.3850&longitude=78.4867
+
+
